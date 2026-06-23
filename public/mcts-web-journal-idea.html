@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MCTS Web Journal — Project Idea</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;700;800&family=IBM+Plex+Mono:wght@500;600&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --paper: #f4f6f8;
+        --elevated: #ffffff;
+        --ink: #0f1419;
+        --ink-muted: #5c6470;
+        --ink-subtle: #8b939e;
+        --accent: #c45a1a;
+        --accent-soft: rgba(196, 90, 26, 0.12);
+        --border: rgba(15, 20, 25, 0.1);
+        --shadow: 0 24px 48px -28px rgba(15, 20, 25, 0.18);
+        --radius: 10px;
+        --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+        --font-body: "Inter", system-ui, sans-serif;
+        --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+        --font-serif: "Instrument Serif", Georgia, serif;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: var(--font-body);
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--ink);
+        background: var(--paper);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .wrap {
+        width: min(720px, calc(100% - 48px));
+        margin-inline: auto;
+        padding-block: clamp(48px, 8vw, 96px);
+      }
+
+      .eyebrow {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 16px;
+      }
+
+      h1 {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 4vw, 2.75rem);
+        font-weight: 800;
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+        margin-bottom: 24px;
+      }
+
+      h1 em {
+        font-family: var(--font-serif);
+        font-style: italic;
+        font-weight: 400;
+      }
+
+      .lede {
+        font-size: 1.125rem;
+        color: var(--ink-muted);
+        line-height: 1.65;
+        margin-bottom: 48px;
+      }
+
+      .pillars {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 48px;
+      }
+
+      .pillar {
+        background: var(--elevated);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 28px;
+      }
+
+      .pillar-num {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        color: var(--accent);
+        margin-bottom: 12px;
+      }
+
+      .pillar h2 {
+        font-family: var(--font-display);
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 12px;
+      }
+
+      .pillar ul {
+        margin-left: 1.25rem;
+        color: var(--ink-muted);
+        font-size: 0.95rem;
+      }
+
+      .pillar li + li {
+        margin-top: 8px;
+      }
+
+      .summary {
+        padding: 28px;
+        background: var(--accent-soft);
+        border-radius: var(--radius);
+        border: 1px solid rgba(196, 90, 26, 0.2);
+      }
+
+      .summary h2 {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .summary p {
+        color: var(--ink-muted);
+        font-size: 0.95rem;
+      }
+
+      footer {
+        margin-top: 48px;
+        padding-top: 24px;
+        border-top: 1px solid var(--border);
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--ink-subtle);
+      }
+
+      footer a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <p class="eyebrow">Project idea · Obsidian</p>
+      <h1>MCTS Web <em>Journal</em></h1>
+
+      <p class="lede">
+        This project focuses on providing a clear and engaging platform to
+        explore recent advancements in Monte Carlo Tree Search (MCTS). The
+        interactive web journal highlights:
+      </p>
+
+      <ol class="pillars">
+        <li class="pillar">
+          <p class="pillar-num">01</p>
+          <h2>Visualization of Recent Advancements</h2>
+          <ul>
+            <li>
+              Presenting the latest improvements and techniques in MCTS research.
+            </li>
+            <li>
+              Offering interactive charts and diagrams for better understanding.
+            </li>
+          </ul>
+        </li>
+
+        <li class="pillar">
+          <p class="pillar-num">02</p>
+          <h2>Learning from Recent Applications</h2>
+          <ul>
+            <li>
+              Showcasing how MCTS is applied in real-world scenarios and
+              cutting-edge AI projects.
+            </li>
+            <li>
+              Providing summaries that explain the significance and outcomes of
+              these applications.
+            </li>
+          </ul>
+        </li>
+
+        <li class="pillar">
+          <p class="pillar-num">03</p>
+          <h2>Experimenting with Modified Algorithms in Games</h2>
+          <ul>
+            <li>
+              Selecting appropriate games to test and evaluate new or modified
+              MCTS algorithms.
+            </li>
+            <li>
+              Allowing users to interact with simulations and observe algorithm
+              performance.
+            </li>
+          </ul>
+        </li>
+      </ol>
+
+      <section class="summary" aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Overall</h2>
+        <p>
+          The platform serves as a comprehensive hub for both learning and
+          experimenting with the latest MCTS developments in an engaging,
+          visual, and interactive format.
+        </p>
+      </section>
+
+      <footer>
+        Source:
+        <a href="#">Second Brain / MCTS Web Journal idea.md</a>
+        ·
+        <a href="/">View Next.js site</a>
+        ·
+        <a href="/visualize">Visualize</a>
+        ·
+        <a href="/applications">Applications</a>
+        ·
+        <a href="/experiments">Experiments</a>
+      </footer>
+    </main>
+  </body>
+</html>
