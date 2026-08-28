@@ -142,6 +142,22 @@
   color: #6bcf8e;
 }
 
+.panelStatusThinking {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #e8c468;
+}
+
+.panelStatusOver {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #e87868;
+}
+
 .snakeGrid {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -200,6 +216,14 @@
   margin-right: var(--space-3);
 }
 
+.historyHint {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: #6bcf8e;
+  margin-left: auto;
+}
+
 .params {
   padding: var(--space-5);
 }
@@ -245,6 +269,14 @@
   border-radius: var(--radius-chip);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #9aa3b0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.paramValue:disabled,
+.paramActive:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
 .paramActive {
